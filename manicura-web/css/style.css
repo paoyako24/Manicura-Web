@@ -1,0 +1,47 @@
+/* style.css (manicura-web/css/style.css) */
+
+body { font-family: "Poppins", sans-serif; margin:0; padding:0; }
+
+/* HERO */
+.hero { max-width:900px; margin:0 auto; border-radius:10px; padding:30px; }
+
+/* GALLERY GRID */
+.gallery-grid {
+  display:grid;
+  grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+  gap:12px;
+  max-width:1100px;
+  margin:0 auto;
+}
+.gallery-grid img {
+  width:100%;
+  height:160px;
+  object-fit:cover;
+  border-radius:8px;
+  cursor:pointer;
+  box-shadow:0 6px 18px rgba(0,0,0,0.12);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.gallery-grid img:hover { transform: scale(1.04); box-shadow:0 12px 30px rgba(0,0,0,0.18); }
+
+/* servicio cards */
+.servicio-card { border-radius:10px; padding:18px; background:#fff0f5; }
+
+/* map wrapper */
+.map-wrapper { max-width:900px; margin:0 auto; overflow:hidden; border-radius:8px; }
+
+/* formulario */
+#w3-main form { max-width:700px; margin:0 auto; }
+.w3-card { box-shadow:0 8px 24px rgba(0,0,0,0.08); }
+
+/* detalles */
+#lightbox .w3-modal-content { background:transparent; box-shadow:none; }
+
+/* responsive tweaks */
+@media (max-width:600px) {
+  .gallery-grid img { height:140px; }
+  .hero { padding:18px; }
+}
+
+
+

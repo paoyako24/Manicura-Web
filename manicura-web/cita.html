@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Reservar cita - Estilo & Belleza</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="w3-light-pink">
+
+  <header class="w3-container w3-center w3-padding-32">
+    <h1 class="w3-text-pink">Reservar cita</h1>
+    <p>Completa el formulario y confirmaremos tu cita</p>
+  </header>
+
+  <nav class="w3-bar w3-white w3-card">
+    <a href="index.html" class="w3-bar-item w3-button">Inicio</a>
+    <a href="servicios.html" class="w3-bar-item w3-button">Servicios</a>
+    <a href="ubicacion.html" class="w3-bar-item w3-button">Ubicación</a>
+    <a href="cita.html" class="w3-bar-item w3-button w3-pink">Reservar cita</a>
+  </nav>
+
+  <main class="w3-container w3-padding-32">
+    <form id="citaForm" class="w3-card w3-white w3-padding" onsubmit="return guardarCita(event)">
+      <label>Nombre completo</label>
+      <input class="w3-input w3-border" id="nombre" type="text" required>
+
+      <label>Teléfono</label>
+      <input class="w3-input w3-border" id="telefono" type="tel" required>
+
+      <label>Servicio</label>
+      <select id="servicio" class="w3-select w3-border" required>
+        <option value="" disabled selected>Elige un servicio</option>
+        <option value="Manicura clásica">Manicura clásica</option>
+        <option value="Manicura con gel">Manicura con gel</option>
+        <option value="Uñas acrílicas">Uñas acrílicas</option>
+      </select>
+
+      <label>Fecha</label>
+      <input class="w3-input w3-border" id="fecha" type="date" required>
+
+      <label>Hora</label>
+      <input class="w3-input w3-border" id="hora" type="time" required>
+
+      <p>
+        <button type="submit" class="w3-button w3-pink w3-round">Confirmar cita</button>
+        <a href="index.html" class="w3-button w3-white w3-border w3-round">Cancelar</a>
+      </p>
+
+      <div id="mensajeCita" class="w3-panel w3-pale-green w3-border" style="display:none;"></div>
+    </form>
+
+    <section class="w3-container w3-margin-top">
+      <h4>Mis citas (local)</h4>
+      <ul id="listaCitas" class="w3-ul"></ul>
+    </section>
+  </main>
+
+  <footer class="w3-container w3-pink w3-center w3-padding-16">
+    <p>Te contactaremos para confirmar tu cita</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
